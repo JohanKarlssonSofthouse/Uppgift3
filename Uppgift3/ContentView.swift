@@ -15,8 +15,6 @@ struct ContentView: View {
     
         NavigationStack {
             VStack {
-                Text("Fruits")
-                
                 List(fruits, id: \.self) { fruit in
                     NavigationLink(destination: FruitView(fruitName: fruit)) {
                         Text(fruit)
@@ -24,6 +22,7 @@ struct ContentView: View {
                 }
                 .listStyle(.plain)
             }
+            .navigationTitle("Fruits")
         }
     }
 }
